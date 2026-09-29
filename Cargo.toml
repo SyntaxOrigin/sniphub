@@ -1,0 +1,29 @@
+[package]
+name = "sniphub"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+license = "MIT"
+description = "Programlama parçaları yöneticisi: tetik->kod genisletme, yapisal sozdimi denetleyicisi ve duz metin parca deposu."
+repository = "https://github.com/SyntaxOrigin/sniphub"
+readme = "README.md"
+keywords = ["cli", "snippets", "code", "productivity"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+# serde: parca deposunun (`parcalar.json`) ve dis/ice aktarma paketlerinin semasi
+# turetilmis veri yapilariyla serilestirilmesi icin gerekli (`src/model.rs`).
+serde = { version = "1", features = ["derive"] }
+# serde_json: depo dosyasinin okunmasi/yazilmasi ve JSON disa aktarim biciminin
+# uretilmesi icin gerekli (`src/depo.rs`, `src/aktarma.rs`).
+serde_json = "1"
+# clap: `add`/`search`/`expand` gibi alt komutlu arayuzun bayrak ve konum
+# cozumlemesi icin gerekli (`src/main.rs`).
+clap = { version = "4", features = ["derive"] }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+panic = "abort"
+strip = "debuginfo"
