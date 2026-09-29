@@ -1,0 +1,3 @@
+BEGIN;
+UPDATE {{1|tablo}} SET {{2|alan}} = {{3|deger}} WHERE id = {{4|kimlik}};
+COMMIT;

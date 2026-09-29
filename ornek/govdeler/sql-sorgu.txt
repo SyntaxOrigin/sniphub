@@ -1,0 +1,5 @@
+SELECT {{1|kolonlar}}
+FROM {{2|tablo}}
+WHERE {{3|kosul}}
+ORDER BY {{4|siralama|olusturma}} DESC
+LIMIT {{5|limit|100}};

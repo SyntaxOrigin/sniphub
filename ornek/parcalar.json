@@ -1,0 +1,307 @@
+{
+  "surum": 1,
+  "parcalar": [
+    {
+      "id": "python-bozuk-girinti-2b081418",
+      "ad": "Python bozuk girinti",
+      "tetik": ";py-bozuk",
+      "aciklama": "Girinti denetimini tetiklemek icin bilinen hatali girinti.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "test",
+        "bozuk"
+      ],
+      "govde": "def {{1|kontrol}}(x):\n    if x > 0:\n        return \"pozitif\"\n      return \"negatif\"",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "hatali"
+    },
+    {
+      "id": "python-csv-okuyucu-218e19ad",
+      "ad": "Python CSV okuyucu",
+      "tetik": ";py-csv",
+      "aciklama": "csv.DictReader ile sozluk listesine donusturen fonksiyon.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "csv",
+        "veri"
+      ],
+      "govde": "import csv\n\ndef {{1|yukle}}(yol: str) -> list[dict]:\n    with open(yol, newline=\"\", encoding=\"utf-8\") as dosya:\n        return list(csv.DictReader(dosya))",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "python-dataclass-47291ddd",
+      "ad": "Python dataclass",
+      "tetik": ";py-dataclass",
+      "aciklama": "Varsayilan degerli dataclass tanimi.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "veri",
+        "iskelet"
+      ],
+      "govde": "from dataclasses import dataclass\n\n@dataclass\nclass {{1|Kayit}}:\n    {{2|ad}}: str\n    {{3|deger}}: int = 0",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "python-dosya-okuma-c18f5d7a",
+      "ad": "Python dosya okuma",
+      "tetik": ";py-oku",
+      "aciklama": "with deyimi ve ucle tirnakli dokustrum iceren fonksiyon.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "dosya",
+        "okuma"
+      ],
+      "govde": "def {{1|oku}}(yol: str) -> str:\n    \"\"\"{{2|dosya}} dosyasını metin olarak okur.\"\"\"\n    with open(yol, encoding=\"utf-8\") as dosya:\n        return dosya.read()",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:25Z",
+      "kullanim_sayaci": 1,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "python-hata-yakalama-101d09ea",
+      "ad": "Python hata yakalama",
+      "tetik": ";py-hata",
+      "aciklama": "except blogu ve f-string mesaji.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "hata"
+      ],
+      "govde": "def {{1|calistir}}(is_levi):\n    try:\n        return is_levi()\n    except {{2|TipHata}} as hata:\n        print(f\"hata: {hata}\")\n        raise",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "python-liste-donusumu-ca761943",
+      "ad": "Python liste donusumu",
+      "tetik": ";py-liste",
+      "aciklama": "Liste ve sozluk kapsayici anlayislari.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "anlayis"
+      ],
+      "govde": "liste = [{{1|eleman}} for oge in {{2|kaynak}} if {{3|kosul}}]\nsozluk = {oge[0]: oge[1] for oge in {{2|kaynak}}}",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "python-sozluk-siralama-9a3a6868",
+      "ad": "Python sozluk siralama",
+      "tetik": ";py-sirala",
+      "aciklama": "lambda ile cok satirlik sorted cagrisi.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "siralama",
+        "lamba"
+      ],
+      "govde": "def {{1|sirala}}(kayitlar: list[dict]) -> list[dict]:\n    return sorted(\n        kayitlar,\n        key=lambda k: k.get(\"{{2|alan}}\", \"\"),\n        reverse={{3|ters|False}},\n    )",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "rust-bozuk-ornek-4521c84a",
+      "ad": "Rust bozuk ornek",
+      "tetik": ";rust-bozuk",
+      "aciklama": "Yapisal denge kontrolunun yakalamasi icin bilerek kapanmamis ayrac.",
+      "dil": "rust",
+      "etiketler": [
+        "rust",
+        "test",
+        "bozuk"
+      ],
+      "govde": "fn bozuk() {\n    let v = vec![1, 2, 3;\n}",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "hatali"
+    },
+    {
+      "id": "rust-display-uygulamasi-f7054d16",
+      "ad": "Rust Display uygulamasi",
+      "tetik": ";rust-display",
+      "aciklama": "Display trait uygulamasi; imlec konumu isaretlidir.",
+      "dil": "rust",
+      "etiketler": [
+        "rust",
+        "trait",
+        "fmt"
+      ],
+      "govde": "impl std::fmt::Display for {{1|Tip}} {\n    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {\n        write!(f, \"{{2|okuma}}\", self.{{3|alan}}){{imlec}}\n    }\n}",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "rust-dosya-okuma-6d34757c",
+      "ad": "Rust dosya okuma",
+      "tetik": ";rust-dosya",
+      "aciklama": "Argumandan yol alip dosyayi String olarak okuyan fonksiyon.",
+      "dil": "rust",
+      "etiketler": [
+        "rust",
+        "dosya",
+        "io"
+      ],
+      "govde": "fn {{1|okuma|oku}}() -> std::io::Result<String> {\n    let yol = std::env::args().nth(1).unwrap_or_else(|| \"veri.txt\".to_string());\n    Ok(std::fs::read_to_string(&yol)?)\n}",
+      "olusturma": "2026-09-29T17:12:14Z",
+      "guncelleme": "2026-09-29T17:12:14Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "rust-hata-yakalama-c6c27e00",
+      "ad": "Rust hata yakalama",
+      "tetik": ";rust-hata",
+      "aciklama": "Result tabanli hata donduren fonksiyon iskeleti.",
+      "dil": "rust",
+      "etiketler": [
+        "rust",
+        "hata",
+        "iskelet"
+      ],
+      "govde": "pub fn {{1|islem}}(girdi: &str) -> Result<String, Hata> {\n    if girdi.is_empty() {\n        return Err(Hata::BosGirdi);\n    }\n    Ok(girdi.to_uppercase())\n}",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "rust-iterator-zinciri-5d4eeee0",
+      "ad": "Rust iterator zinciri",
+      "tetik": ";rust-iter",
+      "aciklama": "filtre + map + collect zinciri.",
+      "dil": "rust",
+      "etiketler": [
+        "rust",
+        "iterasyon"
+      ],
+      "govde": "{{1|kayitlar}}\n    .iter()\n    .filter(|k| {{2|kosul}})\n    .map(|k| k.{{3|alan}})\n    .collect::<Vec<_>>()",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "rust-match-guard-be5f8cc6",
+      "ad": "Rust match guard",
+      "tetik": ";rust-match",
+      "aciklama": "Guard kosulu ve varsayilan kollari olan match iskeleti.",
+      "dil": "rust",
+      "etiketler": [
+        "rust",
+        "match",
+        "iskelet"
+      ],
+      "govde": "match deger {\n    Some(x) if x > {{1|esik|0}} => {{2|buyuk}},\n    Some(_) => {{3|kucuk}},\n    None => {{4|yok}},\n}",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "rust-struct-tanimi-907d834b",
+      "ad": "Rust struct tanimi",
+      "tetik": ";rust-struct",
+      "aciklama": "Alanlari ve turtilmis ozellikleri olan Rust struct iskeleti.",
+      "dil": "rust",
+      "etiketler": [
+        "rust",
+        "veri",
+        "iskelet"
+      ],
+      "govde": "/// {{1|aciklama}}\n#[derive(Debug, Clone, PartialEq)]\npub struct {{2|Kayit}} {\n    pub {{3|ad}}: String,\n}\n\nimpl {{2|Kayit}} {\n    pub fn yeni({{3|ad}}: impl Into<String>) -> Self {\n        Self { {{3|ad}}: {{3|ad}}.into() }\n    }\n}",
+      "olusturma": "2026-09-29T17:12:14Z",
+      "guncelleme": "2026-09-29T17:12:14Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "rust-test-fonksiyonu-73dfff0a",
+      "ad": "Rust test fonksiyonu",
+      "tetik": ";rust-test",
+      "aciklama": "Isim yer tutucusuyla birim test iskeleti.",
+      "dil": "rust",
+      "etiketler": [
+        "rust",
+        "test",
+        "iskelet"
+      ],
+      "govde": "#[test]\nfn {{1|adli}}_calisiyor() {\n    let sonuc = {{2|ifade}};\n    assert!(sonuc);\n}",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "sql-guncelleme-blogu-ba2d39af",
+      "ad": "SQL guncelleme blogu",
+      "tetik": ";sql-guncel",
+      "aciklama": "Transaction icinde tek satir guncelleme.",
+      "dil": "sql",
+      "etiketler": [
+        "sql",
+        "guncelleme"
+      ],
+      "govde": "BEGIN;\nUPDATE {{1|tablo}} SET {{2|alan}} = {{3|deger}} WHERE id = {{4|kimlik}};\nCOMMIT;",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "denenmemis"
+    },
+    {
+      "id": "sql-sorgu-iskeleti-73cec3d3",
+      "ad": "SQL sorgu iskeleti",
+      "tetik": ";sql-sorgu",
+      "aciklama": "Konumsal ve varsayilan degerli yer tutucular tasiyan SQL iskeleti.",
+      "dil": "sql",
+      "etiketler": [
+        "sql",
+        "sorgu",
+        "iskelet"
+      ],
+      "govde": "SELECT {{1|kolonlar}}\nFROM {{2|tablo}}\nWHERE {{3|kosul}}\nORDER BY {{4|siralama|olusturma}} DESC\nLIMIT {{5|limit|100}};",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:49Z",
+      "kullanim_sayaci": 1,
+      "dogrulama": "denenmemis"
+    },
+    {
+      "id": "sql-tarih-filtresi-fcc09405",
+      "ad": "SQL tarih filtresi",
+      "tetik": ";sql-tarih",
+      "aciklama": "Tarih ve durum icin varsayilan degerli filtre.",
+      "dil": "sql",
+      "etiketler": [
+        "sql",
+        "tarih",
+        "sorgu"
+      ],
+      "govde": "SELECT * FROM {{1|tablo}}\nWHERE olusturma >= '{{2|tarih|bugun}}'\n  AND durum = '{{3|durum|aktif}}'",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "denenmemis"
+    }
+  ]
+}

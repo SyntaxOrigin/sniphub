@@ -1,0 +1,11 @@
+/// {{1|aciklama}}
+#[derive(Debug, Clone, PartialEq)]
+pub struct {{2|Kayit}} {
+    pub {{3|ad}}: String,
+}
+
+impl {{2|Kayit}} {
+    pub fn yeni({{3|ad}}: impl Into<String>) -> Self {
+        Self { {{3|ad}}: {{3|ad}}.into() }
+    }
+}

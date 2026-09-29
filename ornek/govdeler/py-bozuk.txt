@@ -1,0 +1,4 @@
+def {{1|kontrol}}(x):
+    if x > 0:
+        return "pozitif"
+      return "negatif"

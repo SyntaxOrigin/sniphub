@@ -1,0 +1,6 @@
+def {{1|sirala}}(kayitlar: list[dict]) -> list[dict]:
+    return sorted(
+        kayitlar,
+        key=lambda k: k.get("{{2|alan}}", ""),
+        reverse={{3|ters|False}},
+    )

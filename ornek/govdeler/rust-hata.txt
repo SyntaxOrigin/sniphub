@@ -1,0 +1,6 @@
+pub fn {{1|islem}}(girdi: &str) -> Result<String, Hata> {
+    if girdi.is_empty() {
+        return Err(Hata::BosGirdi);
+    }
+    Ok(girdi.to_uppercase())
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SnipHub Katalogu</title>
+<style>
+:root{color-scheme:light dark}body{font-family:system-ui,"Segoe UI",Roboto,sans-serif;margin:2rem auto;max-width:60rem;padding:0 1rem;line-height:1.6;background:#f5f7fa;color:#161b22}h1{border-bottom:2px solid #1f5fd0;padding-bottom:.4rem}.ozet,.meta,.aciklama{color:#57606d;font-size:.92rem}.parca{border:1px solid #d3dae3;border-radius:10px;padding:1rem 1.2rem;margin:1.2rem 0;background:#fff}pre{background:#f1f3f7;border-radius:8px;padding:.9rem 1rem;overflow-x:auto}code{font-family:ui-monospace,Consolas,monospace}.etiket{display:inline-block;background:#e7effc;color:#1f5fd0;border-radius:999px;padding:.1rem .6rem;font-size:.82rem;margin-right:.3rem}.denetim{font-size:.85rem}.denetim.ok{color:#14683c}.denetim.hata{color:#9d2626}@media(prefers-color-scheme:dark){body{background:#0e1116;color:#e6edf3}.parca{background:#161b22;border-color:#2b333d}pre{background:#10161d}.ozet,.meta,.aciklama{color:#9aa7b4}.etiket{background:#17233a;color:#6ea8fe}}
+</style>
+</head>
+<body>
+<h1>SnipHub Katalogu</h1>
+<p class="ozet">18 parça · biçim sürümü 1 · yapısal denge kontrolü raporlandı, gramer doğrulaması yapılmadı.</p>
+<section class="parca">
+<h2>Python bozuk girinti</h2>
+<p class="meta"><code>;py-bozuk</code> · Python · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">python</span> <span class="etiket">test</span> <span class="etiket">bozuk</span></p>
+<p class="aciklama">Girinti denetimini tetiklemek icin bilinen hatali girinti.</p>
+<pre><code>def {{1|kontrol}}(x):
+    if x &gt; 0:
+        return &quot;pozitif&quot;
+      return &quot;negatif&quot;</code></pre>
+<p class="denetim hata">yapısal denge tamam değil</p>
+</section>
+<section class="parca">
+<h2>Python CSV okuyucu</h2>
+<p class="meta"><code>;py-csv</code> · Python · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">python</span> <span class="etiket">csv</span> <span class="etiket">veri</span></p>
+<p class="aciklama">csv.DictReader ile sozluk listesine donusturen fonksiyon.</p>
+<pre><code>import csv
+
+def {{1|yukle}}(yol: str) -&gt; list[dict]:
+    with open(yol, newline=&quot;&quot;, encoding=&quot;utf-8&quot;) as dosya:
+        return list(csv.DictReader(dosya))</code></pre>
+<p class="denetim ok">yapısal denge tamam</p>
+</section>
+<section class="parca">
+<h2>Python dataclass</h2>
+<p class="meta"><code>;py-dataclass</code> · Python · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">python</span> <span class="etiket">veri</span> <span class="etiket">iskelet</span></p>
+<p class="aciklama">Varsayilan degerli dataclass tanimi.</p>
+<pre><code>from dataclasses import dataclass
+
+@dataclass
+class {{1|Kayit}}:
+    {{2|ad}}: str
+    {{3|deger}}: int = 0</code></pre>
+<p class="denetim ok">yapısal denge tamam</p>
+</section>
+<section class="parca">
+<h2>Python dosya okuma</h2>
+<p class="meta"><code>;py-oku</code> · Python · 1 kullanım</p>
+<p class="etiketler"><span class="etiket">python</span> <span class="etiket">dosya</span> <span class="etiket">okuma</span></p>
+<p class="aciklama">with deyimi ve ucle tirnakli dokustrum iceren fonksiyon.</p>
+<pre><code>def {{1|oku}}(yol: str) -&gt; str:
+    &quot;&quot;&quot;{{2|dosya}} dosyasını metin olarak okur.&quot;&quot;&quot;
+    with open(yol, encoding=&quot;utf-8&quot;) as dosya:
+        return dosya.read()</code></pre>
+<p class="denetim ok">yapısal denge tamam</p>
+</section>
+<section class="parca">
+<h2>Python hata yakalama</h2>
+<p class="meta"><code>;py-hata</code> · Python · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">python</span> <span class="etiket">hata</span></p>
+<p class="aciklama">except blogu ve f-string mesaji.</p>
+<pre><code>def {{1|calistir}}(is_levi):
+    try:
+        return is_levi()
+    except {{2|TipHata}} as hata:
+        print(f&quot;hata: {hata}&quot;)
+        raise</code></pre>
+<p class="denetim ok">yapısal denge tamam</p>
+</section>
+<section class="parca">
+<h2>Python liste donusumu</h2>
+<p class="meta"><code>;py-liste</code> · Python · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">python</span> <span class="etiket">anlayis</span></p>
+<p class="aciklama">Liste ve sozluk kapsayici anlayislari.</p>
+<pre><code>liste = [{{1|eleman}} for oge in {{2|kaynak}} if {{3|kosul}}]
+sozluk = {oge[0]: oge[1] for oge in {{2|kaynak}}}</code></pre>
+<p class="denetim ok">yapısal denge tamam</p>
+</section>
+<section class="parca">
+<h2>Python sozluk siralama</h2>
+<p class="meta"><code>;py-sirala</code> · Python · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">python</span> <span class="etiket">siralama</span> <span class="etiket">lamba</span></p>
+<p class="aciklama">lambda ile cok satirlik sorted cagrisi.</p>
+<pre><code>def {{1|sirala}}(kayitlar: list[dict]) -&gt; list[dict]:
+    return sorted(
+        kayitlar,
+        key=lambda k: k.get(&quot;{{2|alan}}&quot;, &quot;&quot;),
+        reverse={{3|ters|False}},
+    )</code></pre>
+<p class="denetim ok">yapısal denge tamam</p>
+</section>
+<section class="parca">
+<h2>Rust bozuk ornek</h2>
+<p class="meta"><code>;rust-bozuk</code> · Rust · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">rust</span> <span class="etiket">test</span> <span class="etiket">bozuk</span></p>
+<p class="aciklama">Yapisal denge kontrolunun yakalamasi icin bilerek kapanmamis ayrac.</p>
+<pre><code>fn bozuk() {
+    let v = vec![1, 2, 3;
+}</code></pre>
+<p class="denetim hata">yapısal denge tamam değil</p>
+</section>
+<section class="parca">
+<h2>Rust Display uygulamasi</h2>
+<p class="meta"><code>;rust-display</code> · Rust · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">rust</span> <span class="etiket">trait</span> <span class="etiket">fmt</span></p>
+<p class="aciklama">Display trait uygulamasi; imlec konumu isaretlidir.</p>
+<pre><code>impl std::fmt::Display for {{1|Tip}} {
+    fn fmt(&amp;self, f: &amp;mut std::fmt::Formatter&lt;&#39;_&gt;) -&gt; std::fmt::Result {
+        write!(f, &quot;{{2|okuma}}&quot;, self.{{3|alan}}){{imlec}}
+    }
+}</code></pre>
+<p class="denetim ok">yapısal denge tamam</p>
+</section>
+<section class="parca">
+<h2>Rust dosya okuma</h2>
+<p class="meta"><code>;rust-dosya</code> · Rust · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">rust</span> <span class="etiket">dosya</span> <span class="etiket">io</span></p>
+<p class="aciklama">Argumandan yol alip dosyayi String olarak okuyan fonksiyon.</p>
+<pre><code>fn {{1|okuma|oku}}() -&gt; std::io::Result&lt;String&gt; {
+    let yol = std::env::args().nth(1).unwrap_or_else(|| &quot;veri.txt&quot;.to_string());
+    Ok(std::fs::read_to_string(&amp;yol)?)
+}</code></pre>
+<p class="denetim ok">yapısal denge tamam</p>
+</section>
+<section class="parca">
+<h2>Rust hata yakalama</h2>
+<p class="meta"><code>;rust-hata</code> · Rust · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">rust</span> <span class="etiket">hata</span> <span class="etiket">iskelet</span></p>
+<p class="aciklama">Result tabanli hata donduren fonksiyon iskeleti.</p>
+<pre><code>pub fn {{1|islem}}(girdi: &amp;str) -&gt; Result&lt;String, Hata&gt; {
+    if girdi.is_empty() {
+        return Err(Hata::BosGirdi);
+    }
+    Ok(girdi.to_uppercase())
+}</code></pre>
+<p class="denetim ok">yapısal denge tamam</p>
+</section>
+<section class="parca">
+<h2>Rust iterator zinciri</h2>
+<p class="meta"><code>;rust-iter</code> · Rust · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">rust</span> <span class="etiket">iterasyon</span></p>
+<p class="aciklama">filtre + map + collect zinciri.</p>
+<pre><code>{{1|kayitlar}}
+    .iter()
+    .filter(|k| {{2|kosul}})
+    .map(|k| k.{{3|alan}})
+    .collect::&lt;Vec&lt;_&gt;&gt;()</code></pre>
+<p class="denetim ok">yapısal denge tamam</p>
+</section>
+<section class="parca">
+<h2>Rust match guard</h2>
+<p class="meta"><code>;rust-match</code> · Rust · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">rust</span> <span class="etiket">match</span> <span class="etiket">iskelet</span></p>
+<p class="aciklama">Guard kosulu ve varsayilan kollari olan match iskeleti.</p>
+<pre><code>match deger {
+    Some(x) if x &gt; {{1|esik|0}} =&gt; {{2|buyuk}},
+    Some(_) =&gt; {{3|kucuk}},
+    None =&gt; {{4|yok}},
+}</code></pre>
+<p class="denetim ok">yapısal denge tamam</p>
+</section>
+<section class="parca">
+<h2>Rust struct tanimi</h2>
+<p class="meta"><code>;rust-struct</code> · Rust · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">rust</span> <span class="etiket">veri</span> <span class="etiket">iskelet</span></p>
+<p class="aciklama">Alanlari ve turtilmis ozellikleri olan Rust struct iskeleti.</p>
+<pre><code>/// {{1|aciklama}}
+#[derive(Debug, Clone, PartialEq)]
+pub struct {{2|Kayit}} {
+    pub {{3|ad}}: String,
+}
+
+impl {{2|Kayit}} {
+    pub fn yeni({{3|ad}}: impl Into&lt;String&gt;) -&gt; Self {
+        Self { {{3|ad}}: {{3|ad}}.into() }
+    }
+}</code></pre>
+<p class="denetim ok">yapısal denge tamam</p>
+</section>
+<section class="parca">
+<h2>Rust test fonksiyonu</h2>
+<p class="meta"><code>;rust-test</code> · Rust · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">rust</span> <span class="etiket">test</span> <span class="etiket">iskelet</span></p>
+<p class="aciklama">Isim yer tutucusuyla birim test iskeleti.</p>
+<pre><code>#[test]
+fn {{1|adli}}_calisiyor() {
+    let sonuc = {{2|ifade}};
+    assert!(sonuc);
+}</code></pre>
+<p class="denetim ok">yapısal denge tamam</p>
+</section>
+<section class="parca">
+<h2>SQL guncelleme blogu</h2>
+<p class="meta"><code>;sql-guncel</code> · SQL · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">sql</span> <span class="etiket">guncelleme</span></p>
+<p class="aciklama">Transaction icinde tek satir guncelleme.</p>
+<pre><code>BEGIN;
+UPDATE {{1|tablo}} SET {{2|alan}} = {{3|deger}} WHERE id = {{4|kimlik}};
+COMMIT;</code></pre>
+<p class="denetim hata">yapısal denge tamam değil</p>
+</section>
+<section class="parca">
+<h2>SQL sorgu iskeleti</h2>
+<p class="meta"><code>;sql-sorgu</code> · SQL · 1 kullanım</p>
+<p class="etiketler"><span class="etiket">sql</span> <span class="etiket">sorgu</span> <span class="etiket">iskelet</span></p>
+<p class="aciklama">Konumsal ve varsayilan degerli yer tutucular tasiyan SQL iskeleti.</p>
+<pre><code>SELECT {{1|kolonlar}}
+FROM {{2|tablo}}
+WHERE {{3|kosul}}
+ORDER BY {{4|siralama|olusturma}} DESC
+LIMIT {{5|limit|100}};</code></pre>
+<p class="denetim hata">yapısal denge tamam değil</p>
+</section>
+<section class="parca">
+<h2>SQL tarih filtresi</h2>
+<p class="meta"><code>;sql-tarih</code> · SQL · 0 kullanım</p>
+<p class="etiketler"><span class="etiket">sql</span> <span class="etiket">tarih</span> <span class="etiket">sorgu</span></p>
+<p class="aciklama">Tarih ve durum icin varsayilan degerli filtre.</p>
+<pre><code>SELECT * FROM {{1|tablo}}
+WHERE olusturma &gt;= &#39;{{2|tarih|bugun}}&#39;
+  AND durum = &#39;{{3|durum|aktif}}&#39;</code></pre>
+<p class="denetim hata">yapısal denge tamam değil</p>
+</section>
+</body>
+</html>

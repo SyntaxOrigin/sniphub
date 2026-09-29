@@ -1,0 +1,4 @@
+fn {{1|okuma|oku}}() -> std::io::Result<String> {
+    let yol = std::env::args().nth(1).unwrap_or_else(|| "veri.txt".to_string());
+    Ok(std::fs::read_to_string(&yol)?)
+}

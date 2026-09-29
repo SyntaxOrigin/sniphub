@@ -1,0 +1,6 @@
+from dataclasses import dataclass
+
+@dataclass
+class {{1|Kayit}}:
+    {{2|ad}}: str
+    {{3|deger}}: int = 0

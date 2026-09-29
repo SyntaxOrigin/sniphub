@@ -1,0 +1,4 @@
+def {{1|oku}}(yol: str) -> str:
+    """{{2|dosya}} dosyasını metin olarak okur."""
+    with open(yol, encoding="utf-8") as dosya:
+        return dosya.read()

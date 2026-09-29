@@ -1,0 +1,3 @@
+SELECT * FROM {{1|tablo}}
+WHERE olusturma >= '{{2|tarih|bugun}}'
+  AND durum = '{{3|durum|aktif}}'

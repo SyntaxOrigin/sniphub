@@ -1,0 +1,5 @@
+#[test]
+fn {{1|adli}}_calisiyor() {
+    let sonuc = {{2|ifade}};
+    assert!(sonuc);
+}

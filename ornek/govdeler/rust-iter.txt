@@ -1,0 +1,5 @@
+{{1|kayitlar}}
+    .iter()
+    .filter(|k| {{2|kosul}})
+    .map(|k| k.{{3|alan}})
+    .collect::<Vec<_>>()

@@ -1,0 +1,2 @@
+liste = [{{1|eleman}} for oge in {{2|kaynak}} if {{3|kosul}}]
+sozluk = {oge[0]: oge[1] for oge in {{2|kaynak}}}

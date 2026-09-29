@@ -1,0 +1,6 @@
+def {{1|calistir}}(is_levi):
+    try:
+        return is_levi()
+    except {{2|TipHata}} as hata:
+        print(f"hata: {hata}")
+        raise

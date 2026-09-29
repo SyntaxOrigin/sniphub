@@ -1,0 +1,5 @@
+import csv
+
+def {{1|yukle}}(yol: str) -> list[dict]:
+    with open(yol, newline="", encoding="utf-8") as dosya:
+        return list(csv.DictReader(dosya))

@@ -1,0 +1,122 @@
+{
+  "surum": 1,
+  "parcalar": [
+    {
+      "id": "python-bozuk-girinti-2b081418",
+      "ad": "Python bozuk girinti",
+      "tetik": ";py-bozuk",
+      "aciklama": "Girinti denetimini tetiklemek icin bilinen hatali girinti.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "test",
+        "bozuk"
+      ],
+      "govde": "def {{1|kontrol}}(x):\n    if x > 0:\n        return \"pozitif\"\n      return \"negatif\"",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "hatali"
+    },
+    {
+      "id": "python-csv-okuyucu-218e19ad",
+      "ad": "Python CSV okuyucu",
+      "tetik": ";py-csv",
+      "aciklama": "csv.DictReader ile sozluk listesine donusturen fonksiyon.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "csv",
+        "veri"
+      ],
+      "govde": "import csv\n\ndef {{1|yukle}}(yol: str) -> list[dict]:\n    with open(yol, newline=\"\", encoding=\"utf-8\") as dosya:\n        return list(csv.DictReader(dosya))",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "python-dataclass-47291ddd",
+      "ad": "Python dataclass",
+      "tetik": ";py-dataclass",
+      "aciklama": "Varsayilan degerli dataclass tanimi.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "veri",
+        "iskelet"
+      ],
+      "govde": "from dataclasses import dataclass\n\n@dataclass\nclass {{1|Kayit}}:\n    {{2|ad}}: str\n    {{3|deger}}: int = 0",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "python-dosya-okuma-c18f5d7a",
+      "ad": "Python dosya okuma",
+      "tetik": ";py-oku",
+      "aciklama": "with deyimi ve ucle tirnakli dokustrum iceren fonksiyon.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "dosya",
+        "okuma"
+      ],
+      "govde": "def {{1|oku}}(yol: str) -> str:\n    \"\"\"{{2|dosya}} dosyasını metin olarak okur.\"\"\"\n    with open(yol, encoding=\"utf-8\") as dosya:\n        return dosya.read()",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:25Z",
+      "kullanim_sayaci": 1,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "python-hata-yakalama-101d09ea",
+      "ad": "Python hata yakalama",
+      "tetik": ";py-hata",
+      "aciklama": "except blogu ve f-string mesaji.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "hata"
+      ],
+      "govde": "def {{1|calistir}}(is_levi):\n    try:\n        return is_levi()\n    except {{2|TipHata}} as hata:\n        print(f\"hata: {hata}\")\n        raise",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "python-liste-donusumu-ca761943",
+      "ad": "Python liste donusumu",
+      "tetik": ";py-liste",
+      "aciklama": "Liste ve sozluk kapsayici anlayislari.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "anlayis"
+      ],
+      "govde": "liste = [{{1|eleman}} for oge in {{2|kaynak}} if {{3|kosul}}]\nsozluk = {oge[0]: oge[1] for oge in {{2|kaynak}}}",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    },
+    {
+      "id": "python-sozluk-siralama-9a3a6868",
+      "ad": "Python sozluk siralama",
+      "tetik": ";py-sirala",
+      "aciklama": "lambda ile cok satirlik sorted cagrisi.",
+      "dil": "python",
+      "etiketler": [
+        "python",
+        "siralama",
+        "lamba"
+      ],
+      "govde": "def {{1|sirala}}(kayitlar: list[dict]) -> list[dict]:\n    return sorted(\n        kayitlar,\n        key=lambda k: k.get(\"{{2|alan}}\", \"\"),\n        reverse={{3|ters|False}},\n    )",
+      "olusturma": "2026-09-29T17:12:15Z",
+      "guncelleme": "2026-09-29T17:12:15Z",
+      "kullanim_sayaci": 0,
+      "dogrulama": "gecerli"
+    }
+  ]
+}
